@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:whatsapp_clone/counter_cubit.dart';
-import 'package:whatsapp_clone/screens/counter_screen.dart';
+import 'package:whatsapp_clone/core/app_theme.dart';
+import 'package:whatsapp_clone/screens/home/home_screen.dart';
 
 void main() {
-  runApp(
-    MultiBlocProvider(
-      providers: [BlocProvider(create: (_) => CounterCubit())],
-      child: const MainApp(),
-    ),
-  );
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -18,7 +12,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CounterScreen(),
+      theme: AppTheme.theme,
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
