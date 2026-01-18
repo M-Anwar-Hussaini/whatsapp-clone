@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/data/chat_data.dart';
 import 'package:whatsapp_clone/widgets/common/custom_card.dart';
 
 class ChatPage extends StatefulWidget {
@@ -11,6 +12,11 @@ class ChatPage extends StatefulWidget {
 class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
-    return ListView(children: [CustomCard()]);
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return CustomCard(chat: chats[index]);
+      },
+      itemCount: chats.length,
+    );
   }
 }
