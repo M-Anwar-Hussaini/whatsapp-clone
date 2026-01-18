@@ -1,4 +1,4 @@
-import 'package:whatsapp_clone/models/chat_model.dart';
+import 'package:whatsapp_clone/models/chat/chat_model.dart';
 
 final List<ChatModel> chats = [
   ChatModel(
