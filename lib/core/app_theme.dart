@@ -11,6 +11,7 @@ class AppTheme {
 
   static ThemeData theme = ThemeData(
     colorScheme: _colorScheme,
+    fontFamily: 'OpenSans',
 
     // AppBar theme
     appBarTheme: AppBarTheme(
@@ -32,7 +33,7 @@ class AppTheme {
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: _colorScheme.primary,
       foregroundColor: _colorScheme.onPrimary,
-      shape: CircleBorder(),
+      shape: RoundedRectangleBorder(),
     ),
   );
 }
